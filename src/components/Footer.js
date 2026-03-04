@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={styles.footerContent}>
                 <div className={styles.footerLeft}>
-                    <span className={styles.footerLogo}>RS.</span>
+                    {/* <span className={styles.footerLogo}>RS.</span> */}
                     <span className={styles.footerCopy}>
                         © {new Date().getFullYear()} Rilo Supriyatno. All rights reserved.
                     </span>

@@ -25,10 +25,6 @@ export default function Navbar() {
     return (
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
             <div className={styles.navContainer}>
-                <a href="#" className={styles.logo}>
-                    RS.
-                </a>
-
                 <ul className={styles.navLinks}>
                     {navItems.map((item) => (
                         <li key={item.href}>
@@ -38,31 +34,31 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-
-                <button
-                    className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <ul className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
-                    {navItems.map((item) => (
-                        <li key={item.href}>
-                            <a
-                                href={item.href}
-                                className={styles.mobileLink}
-                                onClick={closeMenu}
-                            >
-                                {item.label}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
             </div>
+
+            <button
+                className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
+                {navItems.map((item) => (
+                    <li key={item.href}>
+                        <a
+                            href={item.href}
+                            className={styles.mobileLink}
+                            onClick={closeMenu}
+                        >
+                            {item.label}
+                        </a>
+                    </li>
+                ))}
+            </ul>
         </nav>
     );
 }
