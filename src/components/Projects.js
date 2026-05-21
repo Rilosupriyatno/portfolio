@@ -9,12 +9,12 @@ const projects = [
         title: "Web and Mobile Based Attendance System Using QR Code",
         institution: "Universitas Teknologi Yogyakarta",
         date: "2022",
-        location: "Yogyakarta",
+        location: "Yogyakarta - Indonesia",
         type: "Final Project",
         image: "/Academic Logo/UTY.jpg",
         description:
             "Built a comprehensive attendance tracking system with real-time QR code scanning capabilities. Features include web dashboard for administrators, mobile app for students, attendance analytics, and automated reporting.",
-        techs: ["React", "Node.js", "QR Code", "MongoDB", "Flutter"],
+        techs: ["Codeigniter", "Bootstrap", "QR Code", "MySQL", "Kotlin"],
     },
     {
         title: "Fullstack Developer Bootcamp",
@@ -26,6 +26,39 @@ const projects = [
         description:
             "Completed comprehensive fullstack development bootcamp covering modern web technologies, backend architecture, RESTful APIs, database design, and deployment best practices. Gained practical experience building production-ready applications.",
         techs: ["JavaScript", "React", "Node.js", "Express", "MongoDB", "PostgreSQL"],
+    },
+    {
+        title: "Rattan Forlife",
+        institution: "Team Project",
+        date: "2023",
+        location: "Cirebon - Indonesia",
+        type: "E-commerce",
+        image: "/Academic Logo/rfl.webp",
+        description:
+            "Built an ecommerce platform for rattan products, crafts, and artisan services with Laravel. Integrated a Kotlin Android WebView so users can access the system through both web and mobile, backed by a MySQL database.",
+        techs: ["Laravel", "Kotlin", "WebView", "MySQL", "PHP"],
+    },
+    {
+        title: "JualBU",
+        institution: "Team Project",
+        date: "2024",
+        location: "Cirebon - Indonesia",
+        type: "Auction Platform",
+        image: "/Academic Logo/jbu.webp",
+        description:
+            "Created a bidding-based marketplace for selling smartphones quickly to nearby partners. Developed the backend with Express.js and the mobile experience with Flutter, enabling partner postings and auction-style bids.",
+        techs: ["Express.js", "Flutter", "Node.js", "Auction", "Firebase"],
+    },
+    {
+        title: "Web-Based Personnel Administration System",
+        institution: "Universitas Teknologi Yogyakarta",
+        date: "2021",
+        location: "Yogyakarta - Indonesia",
+        type: "Practical Work",
+        image: "/Academic Logo/UTY.jpg",
+        description:
+            "Implemented a web-based personnel administration system with full CRUD, position management, and position changes according to company decrees. Built the application using libraries and frameworks with template-based UI, delivering a solution aligned to company administration processes.",
+        techs: ["Codeigniter", "Bootstrap", "MySQL"],
     },
 ];
 
@@ -58,7 +91,7 @@ export default function Projects() {
                         Featured <span className="gradient-text">projects</span>
                     </h2>
                     <p className="section-subtitle">
-                        Independent projects including final projects and bootcamp works
+                        Independent and team projects including ecommerce, auction, and bootcamp work
                     </p>
                 </motion.div>
 
@@ -137,9 +170,8 @@ export default function Projects() {
                         {projects.map((_, i) => (
                             <button
                                 key={i}
-                                className={`${styles.dot} ${
-                                    i === currentIndex ? styles.activeDot : ""
-                                }`}
+                                className={`${styles.dot} ${i === currentIndex ? styles.activeDot : ""
+                                    }`}
                                 onClick={() => goToSlide(i)}
                                 aria-label={`Go to project ${i + 1}`}
                             />

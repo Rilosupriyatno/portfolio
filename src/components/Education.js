@@ -75,7 +75,7 @@ export default function Education() {
                     <span className="section-label">Languages</span>
                     <div className={styles.langGrid}>
                         <div className={styles.langCard}>
-                            <span className={styles.langFlag}>🇬🇧</span>
+                            <span className={styles.langFlag}>🇺🇸</span>
                             <div>
                                 <div className={styles.langName}>English</div>
                                 <div className={styles.langLevel}>Professional</div>
