@@ -130,6 +130,7 @@ export default function Certificates() {
                             width={800}
                             height={600}
                             className={styles.modalImage}
+                            style={{ width: "100%", height: "auto" }}
                         />
                     </motion.div>
                 </motion.div>
