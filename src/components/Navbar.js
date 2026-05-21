@@ -5,8 +5,8 @@ import styles from "./Navbar.module.css";
 const navItems = [
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
-    { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
+    { label: "Skills", href: "#skills" },
     { label: "Education", href: "#education" },
     { label: "Certificates", href: "#certificates" },
     { label: "Contact", href: "#contact" },
