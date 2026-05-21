@@ -1,6 +1,26 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./Education.module.css";
+
+const educationEntries = [
+    {
+        logo: "/Academic%20Logo/UTY.jpg",
+        alt: "UTY logo",
+        type: "Degree",
+        title: "Bachelor's Degree",
+        institution: "Universitas Teknologi Yogyakarta",
+        date: "📍 Yogyakarta — Aug 2022",
+    },
+    {
+        logo: "/Academic%20Logo/SAWAL.png",
+        alt: "SAWAL logo",
+        type: "High School",
+        title: "SMAN 1 Waled",
+        institution: "Senior High School",
+        date: "📍 Cirebon — Graduated 2018",
+    },
+];
 
 export default function Education() {
     return (
@@ -19,45 +39,30 @@ export default function Education() {
                 </motion.div>
 
                 <div className={styles.educationGrid}>
-                    <motion.div
-                        className={styles.eduCard}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <div className={styles.eduIcon}>🎓</div>
-                        <div className={styles.eduType}>Degree</div>
-                        <h3 className={styles.eduTitle}>Bachelor&apos;s Degree</h3>
-                        <p className={styles.eduInstitution}>
-                            Universitas Teknologi Yogyakarta
-                        </p>
-                        <p className={styles.eduDate}>📍 Yogyakarta — Aug 2022</p>
-                        <p className={styles.eduDescription}>
-                            Final Project: Web and mobile based attendance system using QR
-                            code. Built a comprehensive system for tracking attendance with
-                            real-time QR scanning capabilities.
-                        </p>
-                    </motion.div>
-
-                    <motion.div
-                        className={styles.eduCard}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                    >
-                        <div className={styles.eduIcon}>📜</div>
-                        <div className={styles.eduType}>Certification</div>
-                        <h3 className={styles.eduTitle}>Fullstack Developer</h3>
-                        <p className={styles.eduInstitution}>haisenin.com</p>
-                        <p className={styles.eduDate}>🗓️ Mar 2023</p>
-                        <p className={styles.eduDescription}>
-                            Completed comprehensive fullstack development certification
-                            covering modern web technologies, backend architecture, and
-                            deployment best practices.
-                        </p>
-                    </motion.div>
+                    {educationEntries.map((entry, index) => (
+                        <motion.div
+                            key={entry.type}
+                            className={styles.eduCard}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
+                            <div className={styles.eduLogoWrapper}>
+                                <Image
+                                    src={entry.logo}
+                                    alt={entry.alt}
+                                    width={56}
+                                    height={56}
+                                    className={styles.eduLogo}
+                                />
+                            </div>
+                            <div className={styles.eduType}>{entry.type}</div>
+                            <h3 className={styles.eduTitle}>{entry.title}</h3>
+                            <p className={styles.eduInstitution}>{entry.institution}</p>
+                            <p className={styles.eduDate}>{entry.date}</p>
+                        </motion.div>
+                    ))}
                 </div>
 
                 <motion.div

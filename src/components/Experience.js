@@ -5,28 +5,44 @@ import styles from "./Experience.module.css";
 const experiences = [
     {
         role: "Full Stack Developer",
-        company: "SCN Group (Rattan Forlife & Baraja Coffee)",
-        date: "Nov 2023 – Dec 2025",
+        company: "Baraja Coffee",
+        companyFull: "PT Sari Coffee Nusantara",
+        date: "Oct 2023 – Dec 2025",
         location: "Indonesia",
-        bullets: [
-            "Developed and maintained core features of an export-oriented e-commerce platform using Laravel, including menu display, cart management, checkout, payment processing, and advanced filtering. Integrated Kotlin WebView for mobile experience.",
-            "Internally transferred to Baraja Coffee following company-wide IT team consolidation, continuing responsibilities across business units.",
-            "Built Baraja Amphitheater — a customer-facing app with menu selection, cart, checkout, table scanning for dine-in, pickup, delivery, and reservations using Express.js, MongoDB, Flutter, Firebase, OAuth, JWT, and Midtrans.",
-            "Designed and implemented backend services and RESTful APIs for the GRO app, supporting on-site ordering, open billing, reservation management with role-based access control.",
-            "Built cross-platform workstation apps (kitchen, bar, etc.) using Flutter for remote printing, raw material tracking, and inventory management.",
-            "Deployed and maintained the entire Baraja Coffee ecosystem on Linux-based VPS environments using Docker, ensuring consistent and scalable deployment.",
+        description:
+            "Worked as a Full Stack Developer responsible for developing, maintaining, and deploying applications across the Baraja Coffee ecosystem, covering customer-facing platforms, internal operational systems, and mobile applications.",
+        responsibilities: [
+            "Developed and maintained backend services and RESTful APIs using Express.js and MongoDB.",
+            "Built cross-platform applications using Flutter for customer and internal operational use.",
+            "Implemented authentication and payment integrations using OAuth, JWT, Firebase, and Midtrans.",
+            "Managed deployment and maintenance on Linux VPS environments using Docker.",
+        ],
+        projects: [
+            {
+                name: "Baraja Amphitheater (Customer Application)",
+                description:
+                    "Developed customer ordering features including menu browsing, cart, checkout, payment, pickup, delivery, reservation, and table QR scanning for dine-in ordering.",
+            },
+            {
+                name: "GRO Application (Internal Operations System)",
+                description:
+                    "Designed backend systems enabling on-site order creation, open billing, reservation management, and role-based employee features.",
+            },
+            {
+                name: "Operational Mobile Applications",
+                description:
+                    "Built Flutter-based applications for kitchen, bar, and operational workstations, supporting remote printing workflows and inventory management.",
+            },
         ],
         techs: [
             "Express.js",
             "MongoDB",
             "Flutter",
             "Firebase",
-            "Laravel",
             "Docker",
             "JWT",
             "OAuth",
             "Midtrans",
-            "Kotlin",
         ],
     },
 ];
@@ -66,19 +82,40 @@ export default function Experience() {
                                 <div className={styles.cardHeader}>
                                     <div>
                                         <h3 className={styles.role}>{exp.role}</h3>
-                                        <p className={styles.company}>{exp.company}</p>
+                                        <p className={styles.company}>
+                                            {exp.company} – {exp.companyFull}
+                                        </p>
                                     </div>
                                     <div className={styles.meta}>
                                         <span className={styles.date}>{exp.date}</span>
-                                        <span className={styles.location}>{exp.location}</span>
+                                        <span className={styles.location}>| {exp.location}</span>
                                     </div>
                                 </div>
 
-                                <ul className={styles.bulletList}>
-                                    {exp.bullets.map((bullet, j) => (
-                                        <li key={j}>{bullet}</li>
+                                <p className={styles.description}>{exp.description}</p>
+
+                                <div className={styles.section}>
+                                    <h4 className={styles.sectionTitle}>Responsibilities</h4>
+                                    <ul className={styles.bulletList}>
+                                        {exp.responsibilities.map((bullet, j) => (
+                                            <li key={j}>{bullet}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className={styles.section}>
+                                    <h4 className={styles.sectionTitle}>
+                                        Key Projects & Achievements
+                                    </h4>
+                                    {exp.projects.map((project, j) => (
+                                        <div key={j} className={styles.project}>
+                                            <h5 className={styles.projectName}>{project.name}</h5>
+                                            <p className={styles.projectDescription}>
+                                                {project.description}
+                                            </p>
+                                        </div>
                                     ))}
-                                </ul>
+                                </div>
 
                                 <div className={styles.techTags}>
                                     {exp.techs.map((tech, j) => (

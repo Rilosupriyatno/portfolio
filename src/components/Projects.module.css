@@ -1,0 +1,302 @@
+.projects {
+  padding: 4rem 0;
+}
+
+.sliderContainer {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.projectCard {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.projectHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projectImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logoImage {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.projectMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.projectType {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.projectDate {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.projectContent {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.projectInstitution {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.projectLocation {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+}
+
+.projectDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techTag {
+  display: inline-block;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  color: #667eea;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.techTag:hover {
+  background: rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.5);
+}
+
+/* Navigation Buttons */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(102, 126, 234, 0.5);
+  color: #667eea;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.navButton:hover {
+  background: rgba(102, 126, 234, 0.4);
+  border-color: rgba(102, 126, 234, 0.8);
+  color: #fff;
+}
+
+.prevButton {
+  left: -70px;
+}
+
+.nextButton {
+  right: -70px;
+}
+
+/* Dots Navigation */
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.activeDot {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  width: 16px;
+}
+
+@media (max-width: 1024px) {
+  .prevButton {
+    left: -55px;
+  }
+
+  .nextButton {
+    right: -55px;
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 2rem 0;
+  }
+
+  .projectCard {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .sliderContainer {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .prevButton {
+    left: 10px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .nextButton {
+    right: 10px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .navButton {
+    font-size: 0.9rem;
+  }
+
+  .projectHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .projectMeta {
+    align-items: flex-start;
+  }
+
+  .projectImage {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logoImage {
+    width: 40px;
+    height: 40px;
+  }
+
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+
+  .techTags {
+    gap: 0.4rem;
+  }
+
+  .techTag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .dotsContainer {
+    gap: 0.7rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .activeDot {
+    width: 14px;
+  }
+}
