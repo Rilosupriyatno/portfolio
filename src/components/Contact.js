@@ -3,6 +3,17 @@ import { motion } from "framer-motion";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const name = form.name.value.trim() || "Visitor";
+        const email = form.email.value.trim();
+        const message = form.message.value.trim() || "Hello, I would like to connect.";
+        const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+        const body = encodeURIComponent(`${message}\n\nName: ${name}\nEmail: ${email}`);
+        window.location.href = `mailto:rilosupriyatno21@gmail.com?subject=${subject}&body=${body}`;
+    };
+
     return (
         <section className={`section ${styles.contact}`} id="contact">
             <div className="container">
@@ -117,6 +128,7 @@ export default function Contact() {
                             <label className={styles.formLabel}>Name</label>
                             <input
                                 type="text"
+                                name="name"
                                 className={styles.formInput}
                                 placeholder="Your name"
                             />
@@ -125,6 +137,7 @@ export default function Contact() {
                             <label className={styles.formLabel}>Email</label>
                             <input
                                 type="email"
+                                name="email"
                                 className={styles.formInput}
                                 placeholder="your@email.com"
                             />
@@ -132,6 +145,7 @@ export default function Contact() {
                         <div className={styles.formGroup}>
                             <label className={styles.formLabel}>Message</label>
                             <textarea
+                                name="message"
                                 className={styles.formTextarea}
                                 placeholder="Your message..."
                             />

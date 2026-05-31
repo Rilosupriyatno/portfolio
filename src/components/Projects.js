@@ -11,10 +11,12 @@ const projects = [
         date: "2022",
         location: "Yogyakarta - Indonesia",
         type: "Final Project",
+        role: "Full Stack Developer",
         image: "/Academic Logo/UTY.jpg",
         description:
-            "Built a comprehensive attendance tracking system with real-time QR code scanning capabilities. Features include web dashboard for administrators, mobile app for students, attendance analytics, and automated reporting.",
-        techs: ["Codeigniter", "Bootstrap", "QR Code", "MySQL", "Kotlin"],
+            "Led the design and implementation of a QR-based attendance platform with an admin dashboard and student mobile app. Delivered automated attendance reports, real-time scanning, and analytics to improve tracking accuracy.",
+        techs: ["CodeIgniter", "PHP", "Bootstrap", "QR Code", "MySQL", "Kotlin"],
+        repoUrl: "https://github.com/Rilosupriyatno/sistem-presensi",
     },
     {
         title: "Fullstack Developer Bootcamp",
@@ -22,10 +24,12 @@ const projects = [
         date: "2023",
         location: "Online",
         type: "Bootcamp",
+        role: "Developer",
         image: "/Academic Logo/harisenin_com_logo.jpg",
         description:
-            "Completed comprehensive fullstack development bootcamp covering modern web technologies, backend architecture, RESTful APIs, database design, and deployment best practices. Gained practical experience building production-ready applications.",
+            "Completed a hands-on fullstack bootcamp by building production-ready web applications. Practiced modern API design, database modeling, frontend state management, and deployment-ready workflows.",
         techs: ["JavaScript", "React", "Node.js", "Express", "MongoDB", "PostgreSQL"],
+        repoUrl: "https://github.com/Rilosupriyatno/games-store",
     },
     {
         title: "Rattan Forlife",
@@ -33,10 +37,12 @@ const projects = [
         date: "2023",
         location: "Cirebon - Indonesia",
         type: "E-commerce",
+        role: "Backend & Mobile Developer",
         image: "/Academic Logo/rfl.webp",
         description:
-            "Built an ecommerce platform for rattan products, crafts, and artisan services with Laravel. Integrated a Kotlin Android WebView so users can access the system through both web and mobile, backed by a MySQL database.",
+            "Built an e-commerce platform for rattan products with Laravel backend and Kotlin WebView mobile access. Helped launch product listing, order management, and customer checkout workflows for artisan sellers.",
         techs: ["Laravel", "Kotlin", "WebView", "MySQL", "PHP"],
+        repoUrl: "https://github.com/Rilosupriyatno/rattanforlife",
     },
     {
         title: "JualBU",
@@ -44,10 +50,12 @@ const projects = [
         date: "2024",
         location: "Cirebon - Indonesia",
         type: "Auction Platform",
+        role: "Full Stack Developer",
         image: "/Academic Logo/jbu.webp",
         description:
-            "Created a bidding-based marketplace for selling smartphones quickly to nearby partners. Developed the backend with Express.js and the mobile experience with Flutter, enabling partner postings and auction-style bids.",
-        techs: ["Express.js", "Flutter", "Node.js", "Auction", "Firebase"],
+            "Developed a partner-facing auction marketplace using Express.js and Flutter. Implemented bid posting, real-time bidding flows, and partner listing management to speed up smartphone resale transactions.",
+        techs: ["Express.js", "Flutter", "Node.js", "Firebase"],
+        repoUrl: "https://github.com/Rilosupriyatno/jual_bu",
     },
     {
         title: "Web-Based Personnel Administration System",
@@ -55,10 +63,12 @@ const projects = [
         date: "2021",
         location: "Yogyakarta - Indonesia",
         type: "Practical Work",
+        role: "Web Developer",
         image: "/Academic Logo/UTY.jpg",
         description:
-            "Implemented a web-based personnel administration system with full CRUD, position management, and position changes according to company decrees. Built the application using libraries and frameworks with template-based UI, delivering a solution aligned to company administration processes.",
-        techs: ["Codeigniter", "Bootstrap", "MySQL"],
+            "Delivered a personnel administration system with full CRUD, position management, and company decree-based updates. Built a role-aware UI and data workflows that supported HR operations and employee record tracking.",
+        techs: ["CodeIgniter", "PHP", "Bootstrap", "MySQL"],
+        repoUrl: "https://github.com/Rilosupriyatno/Sistem-Admin",
     },
 ];
 
@@ -93,6 +103,14 @@ export default function Projects() {
                     <p className="section-subtitle">
                         Independent and team projects including ecommerce, auction, and bootcamp work
                     </p>
+                    <a
+                        href="https://github.com/Rilosupriyatno"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline"
+                    >
+                        View full GitHub portfolio
+                    </a>
                 </motion.div>
 
                 <div className={styles.sliderContainer}>
@@ -131,6 +149,7 @@ export default function Projects() {
                                     <p className={styles.projectInstitution}>
                                         {project.institution}
                                     </p>
+                                    <p className={styles.projectRole}>{project.role}</p>
                                     <p className={styles.projectLocation}>
                                         📍 {project.location}
                                     </p>
@@ -145,6 +164,17 @@ export default function Projects() {
                                             {tech}
                                         </span>
                                     ))}
+                                </div>
+
+                                <div className={styles.projectActions}>
+                                    <a
+                                        href={project.repoUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.projectActionBtn}
+                                    >
+                                        View Code
+                                    </a>
                                 </div>
                             </motion.div>
                         ))}

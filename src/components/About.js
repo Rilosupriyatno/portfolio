@@ -44,15 +44,16 @@ export default function About() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <p>
-                            Full Stack Developer with over 2 years of experience in building
-                            and maintaining web and mobile applications across multiple
-                            business units. Proven track record in delivering scalable backend
-                            services and designing robust RESTful APIs.
+                            Full Stack Developer with over 2 years of experience building
+                            web and mobile applications for academic and commercial use. I
+                            focus on delivering stable backend services, clean REST APIs,
+                            and user-friendly interfaces that solve real business problems.
                         </p>
                         <p>
-                            Skilled in leveraging Docker-based deployment and efficient
-                            database management. Known for strong problem-solving abilities and
-                            producing production-ready systems that align with business goals.
+                            Skilled in Docker-based deployment, database design, and
+                            production-ready workflows. I build solutions that improve
+                            operational efficiency, lower manual effort, and support fast
+                            decision-making.
                         </p>
 
                         <div className={styles.aboutHighlights}>
