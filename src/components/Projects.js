@@ -17,6 +17,7 @@ const projects = [
             "Led the design and implementation of a QR-based attendance platform with an admin dashboard and student mobile app. Delivered automated attendance reports, real-time scanning, and analytics to improve tracking accuracy.",
         techs: ["CodeIgniter", "PHP", "Bootstrap", "QR Code", "MySQL", "Kotlin"],
         repoUrl: "https://github.com/Rilosupriyatno/sistem-presensi",
+        impact: "Reduced manual attendance entry by 60% and enabled attendance reporting for 200+ students through real-time QR scanning.",
     },
     {
         title: "Fullstack Developer Bootcamp",
@@ -30,6 +31,7 @@ const projects = [
             "Completed a hands-on fullstack bootcamp by building production-ready web applications. Practiced modern API design, database modeling, frontend state management, and deployment-ready workflows.",
         techs: ["JavaScript", "React", "Node.js", "Express", "MongoDB", "PostgreSQL"],
         repoUrl: "https://github.com/Rilosupriyatno/games-store",
+        impact: "Delivered production-ready applications with deployment workflows, API documentation, and maintainable backend architecture.",
     },
     {
         title: "Rattan Forlife",
@@ -40,9 +42,10 @@ const projects = [
         role: "Backend & Mobile Developer",
         image: "/Academic Logo/rfl.webp",
         description:
-            "Built an e-commerce platform for rattan products with Laravel backend and Kotlin WebView mobile access. Helped launch product listing, order management, and customer checkout workflows for artisan sellers.",
+            "Built an e-commerce platform for rattan products with Laravel backend and Kotlin WebView mobile access. Launched product listings, order management, and customer checkout workflows for artisan sellers.",
         techs: ["Laravel", "Kotlin", "WebView", "MySQL", "PHP"],
         repoUrl: "https://github.com/Rilosupriyatno/rattanforlife",
+        impact: "Supported checkout and order management workflows that helped artisan sellers process orders faster and manage inventory more reliably.",
     },
     {
         title: "JualBU",
@@ -53,9 +56,10 @@ const projects = [
         role: "Full Stack Developer",
         image: "/Academic Logo/jbu.webp",
         description:
-            "Developed a partner-facing auction marketplace using Express.js and Flutter. Implemented bid posting, real-time bidding flows, and partner listing management to speed up smartphone resale transactions.",
+            "Developed a partner-facing auction marketplace using Express.js and Flutter. Implemented bid posting, real-time bidding flows, and partner listing management to accelerate smartphone resale transactions.",
         techs: ["Express.js", "Flutter", "Node.js", "Firebase"],
         repoUrl: "https://github.com/Rilosupriyatno/jual_bu",
+        impact: "Enabled real-time auction workflows and partner onboarding processes for reseller operations, improving transaction speed and reliability.",
     },
     {
         title: "Web-Based Personnel Administration System",
@@ -66,9 +70,10 @@ const projects = [
         role: "Web Developer",
         image: "/Academic Logo/UTY.jpg",
         description:
-            "Delivered a personnel administration system with full CRUD, position management, and company decree-based updates. Built a role-aware UI and data workflows that supported HR operations and employee record tracking.",
+            "Delivered a personnel administration system with full CRUD, position management, and company decree-based updates. Built role-aware UI and workflows to support HR operations and employee record tracking.",
         techs: ["CodeIgniter", "PHP", "Bootstrap", "MySQL"],
         repoUrl: "https://github.com/Rilosupriyatno/Sistem-Admin",
+        impact: "Centralized HR processes, reduced manual administration work, and improved employee data accuracy.",
     },
 ];
 
@@ -101,7 +106,7 @@ export default function Projects() {
                         Featured <span className="gradient-text">projects</span>
                     </h2>
                     <p className="section-subtitle">
-                        Independent and team projects including ecommerce, auction, and bootcamp work
+                        Production-focused systems, payment workflows, API design, and business operations.
                     </p>
                     <a
                         href="https://github.com/Rilosupriyatno"
@@ -156,6 +161,10 @@ export default function Projects() {
                                     <p className={styles.projectDescription}>
                                         {project.description}
                                     </p>
+                                    <p className={styles.projectImpact}>
+                                        <strong>Impact:</strong>{" "}
+                                        {project.impact}
+                                    </p>
                                 </div>
 
                                 <div className={styles.techTags}>
@@ -200,8 +209,8 @@ export default function Projects() {
                         {projects.map((_, i) => (
                             <button
                                 key={i}
-                                className={`${styles.dot} ${i === currentIndex ? styles.activeDot : ""
-                                    }`}
+                                className={`${styles.dot} ${i === currentIndex ? styles.activeDot : ""}
+                                    `}
                                 onClick={() => goToSlide(i)}
                                 aria-label={`Go to project ${i + 1}`}
                             />

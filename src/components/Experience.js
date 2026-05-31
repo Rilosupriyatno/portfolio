@@ -10,28 +10,29 @@ const experiences = [
         date: "Oct 2023 – Dec 2025",
         location: "Indonesia",
         description:
-            "Worked as a Full Stack Developer responsible for developing, maintaining, and deploying applications across the Baraja Coffee ecosystem, covering customer-facing platforms, internal operational systems, and mobile applications.",
+            "Worked as a Full Stack Developer delivering production-ready applications across customer-facing platforms, internal operations, and mobile workflows for the Baraja Coffee ecosystem.",
         responsibilities: [
-            "Developed and maintained backend services and RESTful APIs using Express.js and MongoDB.",
-            "Built cross-platform applications using Flutter for customer and internal operational use.",
-            "Implemented authentication and payment integrations using OAuth, JWT, Firebase, and Midtrans.",
-            "Managed deployment and maintenance on Linux VPS environments using Docker.",
+            "Delivered backend services and RESTful APIs for order, inventory, and checkout workflows using Express.js and MongoDB.",
+            "Built cross-platform Flutter applications for customer ordering and internal operational workstations.",
+            "Implemented authentication and payment integrations with OAuth, JWT, Firebase, and Midtrans to support secure checkout and business processes.",
+            "Managed deployment and maintenance on Linux VPS environments with Docker to keep production systems stable and reliable.",
+            "Improved operations efficiency by reducing manual order handling and enabling digital ordering workflows across customer and staff apps.",
         ],
         projects: [
             {
                 name: "Baraja Amphitheater (Customer Application)",
                 description:
-                    "Developed customer ordering features including menu browsing, cart, checkout, payment, pickup, delivery, reservation, and table QR scanning for dine-in ordering.",
+                    "Built customer ordering features for menu browsing, cart, checkout, payment, delivery, and QR-based dine-in ordering. Supported real customer transactions and reduced manual cashier workload.",
             },
             {
                 name: "GRO Application (Internal Operations System)",
                 description:
-                    "Designed backend systems enabling on-site order creation, open billing, reservation management, and role-based employee features.",
+                    "Designed backend systems for on-site order creation, open billing, reservation management, and role-based employee access. Helped staff process orders faster and manage service operations more reliably.",
             },
             {
                 name: "Operational Mobile Applications",
                 description:
-                    "Built Flutter-based applications for kitchen, bar, and operational workstations, supporting remote printing workflows and inventory management.",
+                    "Built Flutter apps for kitchen, bar, and operations teams, supporting remote printing and inventory workflows. Enabled faster order fulfillment and improved communication across workstations.",
             },
         ],
         techs: [

@@ -1,107 +1,169 @@
 .about {
-    position: relative;
+  position: relative;
 }
 
 .aboutGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
-    margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 48px;
 }
 
 .aboutText p {
-    color: var(--text-secondary);
-    font-size: 1.05rem;
-    line-height: 1.9;
-    margin-bottom: 24px;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 24px;
 }
 
 .aboutHighlights {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.achievements {
+  margin-top: 24px;
+}
+
+.achievements h4 {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.achievements ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-secondary);
+}
+
+.achievements li {
+  margin-bottom: 8px;
+}
+
+.githubArea {
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.githubArea a {
+  margin-left: 8px;
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+.githubHint {
+  margin-left: 8px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }
 
 .highlight {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--text-secondary);
-    font-size: 0.92rem;
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 500;
 }
 
 .highlightIcon {
-    width: 36px;
-    height: 36px;
-    border-radius: var(--radius-sm);
-    background: rgba(6, 182, 212, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent-primary);
-    font-size: 1.1rem;
-    flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(6, 182, 212, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 .aboutCards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 .aboutCard {
-    background: var(--bg-glass);
-    backdrop-filter: var(--glass-blur);
-    border: var(--glass-border);
-    border-radius: var(--radius-lg);
-    padding: 24px;
-    text-align: center;
-    transition: var(--transition-base);
+  background: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  transition: var(--transition-base);
 }
 
 .aboutCard:hover {
-    border-color: var(--border-accent);
-    box-shadow: var(--shadow-glow);
-    transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
 }
 
 .aboutCardIcon {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    display: block;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  display: block;
 }
 
 .aboutCardValue {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 800;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .aboutCardLabel {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    font-weight: 500;
-    margin-top: 4px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.previewGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.previewCard {
+  background: var(--bg-glass);
+  border: var(--glass-border);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.previewImage {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, #f3f4f6, #e5e7eb);
 }
 
 @media (max-width: 768px) {
-    .aboutGrid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
-    .aboutHighlights {
-        grid-template-columns: 1fr;
-    }
+  .aboutHighlights {
+    grid-template-columns: 1fr;
+  }
 
-    .aboutCards {
-        grid-template-columns: 1fr 1fr;
-    }
+  .aboutCards {
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import styles from "./About.module.css";
 
 const cards = [
@@ -11,11 +12,11 @@ const cards = [
 
 const highlights = [
     { icon: "⚡", text: "RESTful API Design" },
-    { icon: "📱", text: "Cross-Platform Mobile" },
-    { icon: "🐳", text: "Docker & DevOps" },
-    { icon: "🔐", text: "Auth & Security" },
-    { icon: "📊", text: "Database Design" },
-    { icon: "🔄", text: "CI/CD Pipelines" },
+    { icon: "📱", text: "Android WebView Integration" },
+    { icon: "📦", text: "Export-Oriented E-commerce" },
+    { icon: "🔐", text: "Payment & Checkout Flows" },
+    { icon: "📊", text: "Database Modeling" },
+    { icon: "☁️", text: "Production Deployment" },
 ];
 
 export default function About() {
@@ -30,8 +31,8 @@ export default function About() {
                 >
                     <span className="section-label">About Me</span>
                     <h2 className="section-title">
-                        Passionate about building{" "}
-                        <span className="gradient-text">digital solutions</span>
+                        Backend-focused Full Stack Developer
+                        <span className="gradient-text"> building export-oriented e-commerce and enterprise business systems</span>
                     </h2>
                 </motion.div>
 
@@ -44,25 +45,22 @@ export default function About() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <p>
-                            Full Stack Developer with over 2 years of experience building
-                            web and mobile applications for academic and commercial use. I
-                            focus on delivering stable backend services, clean REST APIs,
-                            and user-friendly interfaces that solve real business problems.
+                            I build production-ready backend systems, payment and checkout flows,
+                            and enterprise business applications for export-oriented companies.
                         </p>
                         <p>
-                            Skilled in Docker-based deployment, database design, and
-                            production-ready workflows. I build solutions that improve
-                            operational efficiency, lower manual effort, and support fast
-                            decision-making.
+                            My work is focused on impact: reducing manual operations, stabilizing
+                            order processing, and enabling business teams to serve customers more reliably.
                         </p>
 
-                        <div className={styles.aboutHighlights}>
-                            {highlights.map((h, i) => (
-                                <div key={i} className={styles.highlight}>
-                                    <span className={styles.highlightIcon}>{h.icon}</span>
-                                    {h.text}
-                                </div>
-                            ))}
+                        <div className={styles.achievements}>
+                            <h4>Selected Achievements</h4>
+                            <ul>
+                                <li>Built export-oriented e-commerce platform with payment gateway and international order support.</li>
+                                <li>Delivered Android WebView integration for mobile business access.</li>
+                                <li>Designed APIs for inventory management, order processing, and reporting.</li>
+                                <li>Maintained production systems used by real customers and internal operations teams.</li>
+                            </ul>
                         </div>
                     </motion.div>
 

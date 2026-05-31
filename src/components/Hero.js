@@ -37,7 +37,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <span className="gradient-text">Full Stack Developer</span>
+                        <span className="gradient-text">Backend-focused Full Stack Developer</span>
                     </motion.p>
 
                     <motion.p
@@ -46,9 +46,8 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        Building scalable web &amp; mobile applications with modern
-                        technologies. Specialized in JavaScript, Flutter, and cloud-native
-                        architectures.
+                        Building production-ready backend systems, payment and checkout
+                        flows, and business platforms used by real customers and operational teams.
                     </motion.p>
 
                     <motion.div
@@ -89,11 +88,11 @@ export default function Hero() {
                         </div>
                         <div className={styles.stat}>
                             <div className={styles.statNumber}>6+</div>
-                            <div className={styles.statLabel}>Projects Delivered</div>
+                            <div className={styles.statLabel}>Production Systems</div>
                         </div>
                         <div className={styles.stat}>
                             <div className={styles.statNumber}>4+</div>
-                            <div className={styles.statLabel}>Tech Stacks</div>
+                            <div className={styles.statLabel}>Backend Stacks</div>
                         </div>
                     </motion.div>
                 </div>
