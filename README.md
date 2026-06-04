@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Ini adalah proyek portfolio berbasis Next.js.
 
-First, run the development server:
+## Prasyarat
+
+Pastikan kamu sudah menginstal:
+
+- Node.js v18+ atau versi yang kompatibel
+- npm, yarn, pnpm, atau bun sebagai package manager
+
+## Instalasi
+
+1. Buka terminal di folder proyek.
+2. Jalankan perintah untuk memasang dependensi:
+
+```bash
+npm install
+```
+
+Jika kamu menggunakan package manager lain:
+
+```bash
+yarn install
+# atau
+pnpm install
+# atau
+bun install
+```
+
+## Menjalankan proyek secara lokal
+
+Setelah dependensi terpasang, jalankan server development:
 
 ```bash
 npm run dev
-# or
+```
+
+Jika menggunakan package manager lain:
+
+```bash
 yarn dev
-# or
+# atau
 pnpm dev
-# or
+# atau
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka di browser:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Perintah penting
 
-## Learn More
+- `npm run dev` - menjalankan server development
+- `npm run build` - membangun aplikasi untuk produksi
+- `npm run start` - menjalankan aplikasi hasil build
+- `npm run lint` - menjalankan ESLint untuk memeriksa kode
 
-To learn more about Next.js, take a look at the following resources:
+## Struktur proyek
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/` - folder utama aplikasi Next.js
+- `components/` - komponen React yang dipakai di halaman
+- `public/` - aset statis seperti gambar
+- `package.json` - skrip dan dependensi proyek
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Build dan produksi
 
-## Deploy on Vercel
+Untuk menyiapkan aplikasi produksi:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Aplikasi akan tersedia di http://localhost:3000 setelah dijalankan.
+
+## Catatan
+
+Proyek ini menggunakan Next.js `16.1.6`, React `19.2.3`, dan `framer-motion` untuk animasi.
+
+Jika kamu mau melakukan perubahan, mulai dari file `app/page.js` dan komponen di `src/components/`.
