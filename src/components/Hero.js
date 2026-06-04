@@ -37,7 +37,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <span className="gradient-text">Backend-focused Full Stack Developer</span>
+                        <span className="gradient-text">Full Stack Developer</span>
                     </motion.p>
 
                     <motion.p
@@ -46,8 +46,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        Building production-ready backend systems, payment and checkout
-                        flows, and business platforms used by real customers and operational teams.
+                        Building comprehensive web solutions that combine elegant frontend experiences with powerful backend systems. I'm passionate about creating applications that scale efficiently, perform reliably, and deliver tangible business impact for teams and customers alike.
                     </motion.p>
 
                     <motion.div

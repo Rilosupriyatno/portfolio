@@ -31,8 +31,8 @@ export default function About() {
                 >
                     <span className="section-label">About Me</span>
                     <h2 className="section-title">
-                        Backend-focused Full Stack Developer
-                        <span className="gradient-text"> building export-oriented e-commerce and enterprise business systems</span>
+                        Full Stack Developer
+                        <span className="gradient-text"> building scalable web applications and business solutions</span>
                     </h2>
                 </motion.div>
 

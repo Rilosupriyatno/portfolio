@@ -7,7 +7,19 @@ const skillCategories = [
         title: "Languages",
         icon: "💻",
         color: "cyan",
-        skills: ["JavaScript", "PHP", "Go", "Rust"],
+        skills: ["JavaScript", "PHP"],
+    },
+    {
+        title: "Frontend & Mobile",
+        icon: "📱",
+        color: "blue",
+        skills: ["React", "Next.js", "Flutter", "Kotlin WebView"],
+    },
+    {
+        title: "Frameworks",
+        icon: "🧩",
+        color: "pink",
+        skills: ["Express.js", "Laravel", "CodeIgniter", "Gin"],
     },
     {
         title: "Backend & APIs",
@@ -17,8 +29,8 @@ const skillCategories = [
             "RESTful API Design",
             "JWT & OAuth 2.0",
             "API Performance Optimization",
-            "Pagination & Filtering",
             "Redis Caching",
+            "Pagination & Filtering",
             "Rate Limiting",
             "System Integration",
             "API Testing",
@@ -28,7 +40,7 @@ const skillCategories = [
         title: "Databases",
         icon: "🗄️",
         color: "green",
-        skills: ["MongoDB", "MySQL", "PostgreSQL"],
+        skills: ["PostgreSQL", "MySQL", "MongoDB"],
     },
     {
         title: "DevOps & Infra",
@@ -36,23 +48,12 @@ const skillCategories = [
         color: "orange",
         skills: [
             "Docker",
-            "Podman",
+            "CI/CD",
             "VPS Deployment",
-            "Environment Management",
             "Linux Server",
+            "Podman",
+            "Environment Management",
         ],
-    },
-    {
-        title: "Frameworks",
-        icon: "🧩",
-        color: "pink",
-        skills: ["Express.js", "Laravel", "CodeIgniter", "Gin"],
-    },
-    {
-        title: "Frontend & Mobile",
-        icon: "📱",
-        color: "blue",
-        skills: ["React", "Flutter", "Next.js", "Kotlin WebView"],
     },
 ];
 
